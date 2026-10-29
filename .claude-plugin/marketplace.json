@@ -1,0 +1,7 @@
+{
+  "name": "plc-standard",
+  "owner": { "name": "Martin Šimek" },
+  "plugins": [
+    { "name": "plc-standard", "source": "./", "description": "Obecný standard PLC kódu Siemens a VCI." }
+  ]
+}

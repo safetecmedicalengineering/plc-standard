@@ -1,0 +1,5 @@
+{
+  "name": "plc-standard",
+  "version": "0.1.0",
+  "description": "Obecný standard pro návrh a kontrolu PLC kódu Siemens (SCL, VCI): agenti plc-coder a plc-reviewer, kontrola zastaralosti snímku VCI exportu."
+}
