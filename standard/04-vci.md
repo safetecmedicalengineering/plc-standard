@@ -1,5 +1,18 @@
 # VCI, import a ověření
 
+## Vycházej z aktuálního repozitáře
+- Před každou analýzou, návrhem, generováním i odpovědí o kódu zjisti aktuální stav: `git status`,
+  `git diff` proti poslednímu commitu a otisk exportu (`vci_snapshot.py --check`).
+- Kód čti znovu ze souborů. Nespoléhej na to, co bylo v konverzaci nebo v dřívějším návrhu – uživatel
+  mohl soubory mezitím změnit v TIA a synchronizovat.
+- Základem každé úpravy je aktuální soubor v exportu, nikdy text z paměti, pravidel, dokumentace,
+  souhrnu konverzace ani dříve vygenerovaná kopie (scratchpad, drafts/). Ty popisují záměr, ne kód.
+  Hotový blok nikdy nekopíruj přes soubor v exportu; upravuj jen konkrétní místa aktuálního souboru.
+- Změny od uživatele (necommitnuté nebo nové od minula) nejdřív projdi a vyjmenuj; navazuj na ně,
+  nepřepisuj je svou starší verzí.
+- Generátor nebo skript stav těsně před zápisem ověří kotvami; když kotva nesedí, nezapisuj a zjisti proč.
+- Když se stav změní během práce (nová synchronizace), začni znovu od aktuálního stavu.
+
 - docs/WORKSPACE.md projektu popisuje skutečnou složku, formáty a mapování skupin.
 - Konfiguraci VCI (.vci/) neměň; ovlivňuje exportní workflow.
 - Nové bloky ukládej do existující skupiny; novou cestu nezakládej bez ověření.

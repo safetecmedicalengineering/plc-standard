@@ -1,5 +1,15 @@
 # Rozsah změn a reference
 
+## Zadání – kriticky, ne slepě
+- Než začneš psát kód, ověř, že zadání dává smysl na skutečném stroji: kolik kroků, otáček, kusů nebo
+  sekund z něj vyjde, a jestli to odpovídá tomu, čeho má změna dosáhnout.
+- Když vychází něco nesmyslného (zbytečný pohyb naprázdno, čekání, které nic nepřinese, podmínka, která
+  nikdy nenastane nebo platí vždy), nepiš to. Zeptej se a řekni, co ti nesedí.
+- Víceznačné pojmy (otáčka vs. krok o pozici, cyklus, takt, kus) si vyjasni dotazem. Nevybírej si sám.
+- V návrhu a changelogu uváděj jednotky výslovně („6 kapes“, ne „6 otáček“) a výsledné číslo
+  (např. „60 kroků“), aby uživatel chybu výkladu viděl ještě před generováním.
+- Stejně kriticky posuď i vlastní návrh: popiš, jak se změna chová v běžném provozu a v krajních stavech.
+
 - Zdrojem pravdy je kód v exportu. Dokumenty v docs/ jsou snímek; při rozporu platí kód a rozpor nahlas.
 - Fakta o konkrétních blocích ber z docs/generated/INVENTORY.md; ověř, že jeho otisk odpovídá exportu.
 - Zachovej přesné názvy bloků, členů DB, UDT a instancí, pokud změna názvu není v zadání.
