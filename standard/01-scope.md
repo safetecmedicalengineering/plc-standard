@@ -1,5 +1,12 @@
 # Rozsah změn a reference
 
+## Zadání – nejdřív ladit, generovat až na pokyn
+- Bloky v exportu negeneruj ani neupravuj, dokud uživatel výslovně neřekne „generuj“ nebo
+  „implementuj“ (případně jasně totéž jinými slovy). Do té doby jen iteruj a lad zadání:
+  analýza, návrh, changelog, otázky.
+- Souhlas s návrhem, odpověď na otázku nebo „dává to smysl“ není pokyn ke generování.
+- Pokyn platí jen pro odsouhlasený changelog. Cokoli navíc nebo jinak znovu navrhni a počkej.
+
 ## Zadání – kriticky, ne slepě
 - Než začneš psát kód, ověř, že zadání dává smysl na skutečném stroji: kolik kroků, otáček, kusů nebo
   sekund z něj vyjde, a jestli to odpovídá tomu, čeho má změna dosáhnout.
