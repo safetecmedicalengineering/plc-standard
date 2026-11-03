@@ -3,18 +3,22 @@
 Obecný standard pro návrh a kontrolu PLC kódu Siemens (SCL, TIA Portal VCI) s Claude Code.
 Neobsahuje nic specifického pro konkrétní stroj. Projektová fakta patří do projektu.
 
-**Návod pro nové uživatele:** {{NAVOD_URL}}
+**Návod pro nové uživatele:** https://claude.ai/artifact/BYerrDYGAeBU88TLpZv86V
 **Pracovní cyklus:** [WORKFLOW.md](WORKFLOW.md) · **Změny:** [CHANGELOG.md](CHANGELOG.md)
 
-## Instalace (jednou na počítač)
+## Instalace
 Předpoklady: Claude Code, git, Python 3.9+.
+
+Jednou na počítač:
 ```bash
 claude plugin marketplace add safetecmedicalengineering/plc-standard
 ```
+V každém PLC projektu (terminál ve složce VCI workspace). Plugin se zapne jen pro tento projekt,
+ostatní projekty standard nenačítají:
 ```bash
-claude plugin install plc-standard@plc-standard
+claude plugin install plc-standard@plc-standard --scope project
 ```
-Nový projekt: otevři složku VCI workspace v Claude Code a spusť `/plc-standard:plc-init`.
+Nový projekt: pak v Claude Code ve stejné složce spusť `/plc-standard:plc-init`.
 
 ## Obsah
 | Cesta | Co to je |

@@ -4,16 +4,36 @@ Usage:
     python plc_init.py <project_root> <plc_folder> [project_name]
 
 <plc_folder> is the folder of the PLC export in the VCI workspace (e.g. 50A1).
-Existing files are never overwritten; they are listed as skipped.
+Existing files are never overwritten; they are listed as skipped. An existing
+.claude/settings.json only gets the plugin marketplace and enablement added.
 Placeholders {{PLC}} and {{PROJECT}} are filled, other {{...}} stay for the user.
 
 Standard library only.
 """
 
+import json
 import sys
 from pathlib import Path
 
 TEMPLATES = Path(__file__).resolve().parent.parent / "templates"
+
+
+def merge_settings(src, dst):
+    """Add the marketplace and the plugin to existing settings; other keys stay untouched."""
+    template = json.loads(src.read_text(encoding="utf-8"))
+    current = json.loads(dst.read_text(encoding="utf-8-sig"))
+    added = []
+    for key in ("extraKnownMarketplaces", "enabledPlugins"):
+        section = current.setdefault(key, {})
+        for name, value in template[key].items():
+            if name not in section:
+                section[name] = value
+                added.append(f"{key}.{name}")
+    if added:
+        dst.write_text(json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+        print(f"doplněno do .claude/settings.json: {', '.join(added)}")
+    else:
+        print("přeskočeno (už obsahuje plugin): .claude/settings.json")
 
 
 def main(argv):
@@ -35,6 +55,9 @@ def main(argv):
             continue
         rel = src.relative_to(TEMPLATES)
         dst = root / rel
+        if dst.exists() and rel.as_posix() == ".claude/settings.json":
+            merge_settings(src, dst)
+            continue
         if dst.exists():
             print(f"přeskočeno (existuje): {rel.as_posix()}")
             continue
