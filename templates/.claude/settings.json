@@ -1,0 +1,14 @@
+{
+  "extraKnownMarketplaces": {
+    "plc-standard": {
+      "source": {
+        "source": "github",
+        "repo": "safetecmedicalengineering/plc-standard"
+      },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": {
+    "plc-standard@plc-standard": true
+  }
+}

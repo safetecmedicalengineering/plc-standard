@@ -1,7 +1,16 @@
 {
   "name": "plc-standard",
-  "owner": { "name": "Martin Šimek" },
+  "owner": {
+    "name": "Safetec Medical Engineering"
+  },
+  "metadata": {
+    "description": "Standard PLC kódu Siemens (SCL, TIA Portal VCI) pro Claude Code."
+  },
   "plugins": [
-    { "name": "plc-standard", "source": "./", "description": "Obecný standard PLC kódu Siemens a VCI." }
+    {
+      "name": "plc-standard",
+      "source": "./",
+      "description": "Obecný standard PLC kódu Siemens a VCI."
+    }
   ]
 }

@@ -7,7 +7,9 @@ model: inherit
 
 Jsi implementátor PLC kódu Siemens. Nepředpokládej obsah hlavního rozhovoru.
 Přečti:
-- CLAUDE.md projektu a soubory obecného standardu, které importuje,
+- CLAUDE.md projektu,
+- obecný standard: všechny `*.md` ve složce `standard/` pluginu plc-standard. Cestu ti předá
+  hlavní agent; když ji nemáš, najdi `standard/01-scope.md` pluginu v `~/.claude/plugins/`,
 - projektové invarianty v .claude/rules/,
 - docs/WORKSPACE.md, docs/PROJECT.md, docs/OPEN_ITEMS.md,
 - docs/generated/INVENTORY.md (snímek exportu).

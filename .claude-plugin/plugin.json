@@ -1,5 +1,9 @@
 {
   "name": "plc-standard",
-  "version": "0.1.0",
-  "description": "Obecný standard pro návrh a kontrolu PLC kódu Siemens (SCL, VCI): agenti plc-coder a plc-reviewer, kontrola zastaralosti snímku VCI exportu."
+  "version": "0.2.0",
+  "description": "Obecný standard pro návrh a kontrolu PLC kódu Siemens (SCL, VCI): pravidla do každé session, agenti plc-coder a plc-reviewer, /plc-init a kontrola zastaralosti snímku VCI exportu.",
+  "author": {
+    "name": "Safetec Medical Engineering"
+  },
+  "repository": "https://github.com/safetecmedicalengineering/plc-standard"
 }

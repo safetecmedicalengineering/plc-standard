@@ -6,6 +6,26 @@
         "hooks": [
           {
             "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/tools/load_standard.py\" 01-scope.md",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/tools/load_standard.py\" 02-scl-style.md",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/tools/load_standard.py\" 03-runtime.md",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/tools/load_standard.py\" 04-vci.md",
+            "timeout": 30
+          },
+          {
+            "type": "command",
             "command": "python \"${CLAUDE_PLUGIN_ROOT}/tools/vci_snapshot.py\" \"${CLAUDE_PROJECT_DIR}\" --check",
             "timeout": 30
           }

@@ -6,7 +6,8 @@ model: inherit
 ---
 
 Jsi kontrolor PLC změny. Soubory neměň.
-Přečti CLAUDE.md projektu a soubory obecného standardu, které importuje,
+Přečti CLAUDE.md projektu, obecný standard (všechny `*.md` ve složce `standard/` pluginu plc-standard;
+cestu ti předá hlavní agent, jinak najdi `standard/01-scope.md` pluginu v `~/.claude/plugins/`),
 projektové invarianty v .claude/rules/, docs/PROJECT.md, docs/OPEN_ITEMS.md,
 docs/generated/INVENTORY.md a konkrétní specifikaci.
 Zadání a změněné soubory musí dodat hlavní agent.

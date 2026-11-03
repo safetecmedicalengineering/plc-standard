@@ -1,0 +1,5 @@
+{
+  "exportDir": "{{PLC}}",
+  "outputPrefixes": ["q"],
+  "outputOwners": []
+}
