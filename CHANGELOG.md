@@ -8,6 +8,10 @@ claude plugin marketplace update plc-standard
 claude plugin update plc-standard@plc-standard
 ```
 
+## 0.2.1 – 2026-11-06
+- Trace: ke každé konfiguraci soubor `docs/trace/<název>.txt` k přímému vložení do TIA
+  (jeden symbolický název na řádek), popis zvlášť v `docs/TRACE_<téma>.md`.
+
 ## 0.2.0 – 2026-11-03
 - Standard se načítá z pluginu (hook SessionStart), ne přes `@import` z plochy.
   Řádky `@~/Desktop/plc-standard/...` z CLAUDE.md projektů odstraň.
