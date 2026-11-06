@@ -31,6 +31,17 @@
 - Po ověření znovu exportuj do workspace, spusť vci_snapshot.py a projdi diff před commitem.
 - Verzionovaný export nenahrazuje archiv celého projektu TIA.
 
+## Trace pro ověření na stroji
+- Když uživatel žádá trace, dodej ke každé konfiguraci soubor, který jde přímo vložit do tabulky
+  signálů trace v TIA: `docs/trace/<název>.txt`, UTF-8, jeden signál na řádek, symbolický název
+  přesně v syntaxi TIA (`"DB".člen.člen`, `"Tag"`, `"TO".ActualPosition`), bez hlavičky, odrážek,
+  číslování a komentářů.
+- Každý název ověř v aktuálním exportu (deklarace v bloku, DB, UDT nebo tag tabulce); nevymýšlej.
+- Počet signálů drž v limitu CPU (S7-1500 obvykle 16 na konfiguraci); víc rozděl do více souborů.
+- Popis dej zvlášť do `docs/TRACE_<téma>.md`: místo záznamu (OB) a perioda, spouštěcí podmínka,
+  předběh, délka, tabulka signálů se stejným pořadím jako soubor (jednotka, proč), scénáře a kritéria OK.
+- Jednocyklové pulzy zaznamenávej v OB, ve kterém vznikají; jinak je vzorkování mine.
+
 ## Po refreshi VCI
 1. Spusť `vci_snapshot.py <projekt>` – přegeneruje docs/generated/INVENTORY.md a zkontroluje invarianty.
 2. Porušení invariantu (exit 2) řeš jako nález, ne úpravou invariants.json.
